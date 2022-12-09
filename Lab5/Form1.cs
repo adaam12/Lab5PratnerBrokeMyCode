@@ -30,7 +30,7 @@ namespace Lab5
         public static int GetRandom(int min, int max)
         {
             Random randomNum = new Random();
-            int number = randomNum.Next(min, max)
+            int number = randomNum.Next(min, max);
             return number;
         }
 
@@ -43,7 +43,7 @@ namespace Lab5
             grpStats.Visible = false;
             txtCode.Focus();
             lblCode.Text = GetRandom(100000, 200001).ToString();
-
+        }
             //string text = form1.title + PROGRAMMER;
         
         //On login button click, Check login details if it matches
@@ -57,7 +57,7 @@ namespace Lab5
             else
             {
                 loginAttempts++;
-                if (loginAttempts > 3)
+                if (loginAttempts  < 3)
                 {
                     MessageBox.Show(loginAttempts + " Incorrect code(s) entered\n " + "Try again - only 3 attempts allowed", PROGRAMMER);
                 }
@@ -246,7 +246,7 @@ namespace Lab5
                 i++;
             }
             while (i < lstNumbers.Items.Count);
-       
+
             return odd;
         }
     }
